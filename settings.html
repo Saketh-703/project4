@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Harmony</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gray-800/90 py-3 px-6 shadow-lg blurred-bg sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg">
+                    <i class="fas fa-music text-white"></i>
+                </div>
+                <h1 class="text-xl font-bold gradient-text">Harmony</h1>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search songs, artists..."
+                        class="bg-gray-700 rounded-full py-2 px-4 pl-10 w-64 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <button class="hover:text-purple-400 transition">
+                    <a href="settings.html"><i class="fas fa-cog text-xl"></i></a>
+                </button>
+                <div
+                    class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-sm font-bold cursor-pointer">
+                    <a href="profile.html"> U</a>
+                </div>
+            </div>
+            <button class="mobile-menu-button md:hidden text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-1 overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar w-64 bg-gray-800 p-4 overflow-y-auto">
+            <nav>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="index.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="discover.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-compass"></i>
+                            <span>Discover</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="favorites.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-heart"></i>
+                            <span>Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="recent.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-clock"></i>
+                            <span>Recent</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="playlists.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fas fa-folder"></i>
+                            <span>Playlists</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="premium.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <span>Premium</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="nav-link flex items-center space-x-3 p-2 rounded hover:bg-gray-700">
+                            <i class="fa-solid fa-eject"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html" class="nav-link flex items-center space-x-3 p-2 rounded bg-gray-700">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mt-8">
+                <h3 class="text-gray-400 uppercase text-xs font-bold mb-2">Playlists</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-gray-300 hover:text-white block py-1">Chill Vibes</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white block py-1">Workout Mix</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white block py-1">Focus Flow</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white block py-1">Road Trip</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white block py-1">Party Hits</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Settings Content Area -->
+        <div class="flex-1 overflow-y-auto p-6">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl font-bold mb-8">Settings</h1>
+                
+                <!-- Account Settings -->
+                <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-user-circle mr-3 text-purple-500"></i>
+                        Account Settings
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Email Address</h3>
+                                <p class="text-gray-400 text-sm">user@example.com</p>
+                            </div>
+                            <button class="text-purple-400 hover:text-purple-300">Change</button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Password</h3>
+                                <p class="text-gray-400 text-sm">••••••••</p>
+                            </div>
+                            <button class="text-purple-400 hover:text-purple-300">Change</button>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Delete Account</h3>
+                                <p class="text-gray-400 text-sm">Permanently delete your account</p>
+                            </div>
+                            <button class="text-red-400 hover:text-red-300">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Audio Settings -->
+                <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-volume-up mr-3 text-purple-500"></i>
+                        Audio Settings
+                    </h2>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Audio Quality</span>
+                                <span class="text-gray-400">High (320kbps)</span>
+                            </div>
+                            <select class="w-full bg-gray-700 border border-gray-600 rounded-md px-3 py-2">
+                                <option>Low (96kbps)</option>
+                                <option>Medium (160kbps)</option>
+                                <option selected>High (320kbps)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-medium">Crossfade</span>
+                                <span class="text-gray-400">3 seconds</span>
+                            </div>
+                            <input type="range" min="0" max="10" value="3" class="w-full accent-purple-500">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Normalize Volume</h3>
+                                <p class="text-gray-400 text-sm">Adjust volume levels to consistent level</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- App Settings -->
+                <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-mobile-alt mr-3 text-purple-500"></i>
+                        App Settings
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Dark Mode</h3>
+                                <p class="text-gray-400 text-sm">Use dark theme</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                            </label>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Stream Over WiFi Only</h3>
+                                <p class="text-gray-400 text-sm">Save mobile data</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer">
+                                <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                            </label>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Download Over WiFi Only</h3>
+                                <p class="text-gray-400 text-sm">Save mobile data</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                            </label>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 class="font-medium">Show Explicit Content</h3>
+                                <p class="text-gray-400 text-sm">Display songs with explicit lyrics</p>
+                            </div>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-600"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Section -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-3 text-purple-500"></i>
+                        About Harmony
+                    </h2>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-medium">Version</h3>
+                            <p class="text-gray-400">1.2.3 (Build 456)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Terms of Service</h3>
+                            <p class="text-gray-400">Read our terms and conditions</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Privacy Policy</h3>
+                            <p class="text-gray-400">Learn how we handle your data</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Send Feedback</h3>
+                            <p class="text-gray-400">Help us improve Harmony</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Player Controls -->
+    <footer class="bg-gray-800 border-t border-gray-700 p-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Song Info -->
+                <div class="flex items-center w-full md:w-1/4 mb-4 md:mb-0">
+                    <img src="images/covers/now_playing.jpg" alt="Now Playing" class="w-12 h-12 rounded mr-3">
+                    <div>
+                        <h4 class="font-medium">Current Song</h4>
+                        <p class="text-gray-400 text-sm">Current Artist</p>
+                    </div>
+                    <button class="ml-4 text-gray-400 hover:text-white">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                
+                <!-- Player Controls -->
+                <div class="w-full md:w-2/4 flex flex-col items-center">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <button class="text-gray-400 hover:text-white text-lg">
+                            <i class="fas fa-random"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-white text-xl">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-200">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-white text-xl">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button class="text-gray-400 hover:text-white text-lg">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                    </div>
+                    <div class="w-full flex items-center space-x-2">
+                        <span class="text-xs text-gray-400">2:34</span>
+                        <div class="flex-1 h-1 bg-gray-600 rounded-full overflow-hidden">
+                            <div class="bg-purple-500 h-full w-1/3"></div>
+                        </div>
+                        <span class="text-xs text-gray-400">3:45</span>
+                    </div>
+                </div>
+                
+                <!-- Volume and Other Controls -->
+                <div class="w-full md:w-1/4 flex justify-end items-center mt-4 md:mt-0">
+                    <button class="text-gray-400 hover:text-white mr-3">
+                        <i class="fas fa-list"></i>
+                    </button>
+                    <button class="text-gray-400 hover:text-white mr-3">
+                        <i class="fas fa-laptop"></i>
+                    </button>
+                    <button class="text-gray-400 hover:text-white mr-3">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="w-20 h-1 bg-gray-600 rounded-full overflow-hidden">
+                        <div class="bg-gray-400 h-full w-3/4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

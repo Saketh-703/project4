@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Harmony - Home</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            /* Custom styles */
+            .sidebar {
+                scrollbar-width: thin;
+                scrollbar-color: #6B46C1 #1F2937;
+            }
+    
+            .sidebar::-webkit-scrollbar {
+                width: 6px;
+            }
+    
+            .sidebar::-webkit-scrollbar-track {
+                background: #1F2937;
+            }
+    
+            .sidebar::-webkit-scrollbar-thumb {
+                background-color: #6B46C1;
+                border-radius: 6px;
+            }
+    
+            .music-card:hover .play-button {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .progress-bar {
+                transition: width 0.3s ease;
+            }
+    
+            .active-nav {
+                background-color: #6B46C1;
+                color: white;
+            }
+    
+            .active-nav:hover {
+                background-color: #7C3AED;
+            }
+    
+            .gradient-text {
+                background: linear-gradient(90deg, #8B5CF6, #EC4899);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+    
+            .blurred-bg {
+                background: rgba(31, 41, 55, 0.7);
+                backdrop-filter: blur(10px);
+            }
+        </style>
+    </head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <header class="bg-gray-800/90 py-3 px-6 shadow-lg blurred-bg sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-gradient-to-br from-purple-600 to-pink-500 rounded-lg">
+                    <i class="fas fa-music text-white"></i>
+                </div>
+                <h1 class="text-xl font-bold gradient-text">Harmony</h1>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search songs, artists..."
+                        class="bg-gray-700 rounded-full py-2 px-4 pl-10 w-64 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <button class="hover:text-purple-400 transition">
+                    <a href="settings.html"><i class="fas fa-cog text-xl"></i></a>
+                </button>
+                <div
+                    class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-sm font-bold cursor-pointer">
+                    <a href="profile.html"> U</a>
+                </div>
+            </div>
+            <button class="mobile-menu-button md:hidden text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex flex-1 overflow-hidden">
+        <!-- Sidebar (same as index.html) -->
+        <aside class="sidebar w-64 bg-gray-800/80 p-4 overflow-y-auto hidden md:block">
+            <div class="mb-8">
+                <div class="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-4 mb-4">
+                    <h3 class="font-bold mb-1">Premium Membership</h3>
+                    <p class="text-xs text-gray-300 mb-2">Unlock all features with Harmony Premium</p>
+                    <button
+                        class="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs py-1 px-3 rounded-full hover:opacity-90 transition">Try
+                        Free</button>
+                </div>
+
+                <nav>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="index.html"
+                                class="nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50 active-nav">
+                                <i class="fas fa-home w-5 text-center"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="discover.html"
+                                class="nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                                <i class="fas fa-compass w-5 text-center"></i>
+                                <span>Discover</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="favorites.html"
+                                class="nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                                <i class="fas fa-heart w-5 text-center"></i>
+                                <span>Favorites</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="recent.html"
+                                class="nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                                <i class="fas fa-clock w-5 text-center"></i>
+                                <span>Recent</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="playlists.html"
+                                class="nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                                <i class="fas fa-folder w-5 text-center"></i>
+                                <span>Playlists</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html"
+                                class="nav-link flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                                <i class="fa-solid fa-eject"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-gray-400 uppercase text-xs font-bold">Your Library</h3>
+                    <button class="text-gray-400 hover:text-white text-sm">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <ul class="space-y-1">
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-300 rounded flex items-center justify-center">
+                                <i class="fas fa-music text-xs"></i>
+                            </div>
+                            <div>
+                                <span class="block">Liked Songs</span>
+                                <span class="text-xs text-gray-400">Playlist • 124 songs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-400 rounded flex items-center justify-center">
+                                <i class="fas fa-headphones text-xs"></i>
+                            </div>
+                            <div>
+                                <span class="block">Focus Mix</span>
+                                <span class="text-xs text-gray-400">Playlist • 56 songs</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700/50">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-br from-yellow-500 to-orange-400 rounded flex items-center justify-center">
+                                <i class="fas fa-running text-xs"></i>
+                            </div>
+                            <div>
+                                <span class="block">Workout Beats</span>
+                                <span class="text-xs text-gray-400">Playlist • 87 songs</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-gray-400 uppercase text-xs font-bold">Recently Played</h3>
+                    <button class="text-gray-400 hover:text-white text-xs">See all</button>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700/50 cursor-pointer">
+                        <img src="images/covers/midnight_sun.jpg" alt="Album"
+                            class="w-10 h-10 rounded">
+                        <div>
+                            <div class="font-medium text-sm">Midnight Memories</div>
+                            <div class="text-xs text-gray-400">Album • One Direction</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700/50 cursor-pointer">
+                        <img src="images/albums/future.jpg" alt="Album"
+                            class="w-10 h-10 rounded">
+                        <div>
+                            <div class="font-medium text-sm">Future Nostalgia</div>
+                            <div class="text-xs text-gray-400">Album • Dua Lipa</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700/50 cursor-pointer">
+                        <img src="images/albums/chr.jpg" alt="Album"
+                            class="w-10 h-10 rounded">
+                        <div>
+                            <div class="font-medium text-sm">Chromatica</div>
+                            <div class="text-xs text-gray-400">Album • Lady Gaga</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Content Area -->
+        <div class="flex-1 overflow-y-auto">
+            <div class="bg-gradient-to-b from-purple-900 to-gray-900 py-16 px-8 text-center">
+                <h1 class="text-4xl font-bold mb-4">Harmony Premium</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                    Elevate your music experience with premium features and uninterrupted listening.
+                </p>
+                <button class="bg-white text-purple-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-200 transition">
+                    Try 1 Month Free
+                </button>
+            </div>
+
+            <section class="max-w-6xl mx-auto py-12 px-8">
+                <h2 class="text-3xl font-bold mb-12 text-center">Why Go Premium?</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <!-- Benefit 1 -->
+                    <div class="bg-gray-800 p-6 rounded-xl text-center hover:bg-gray-700 transition">
+                        <div class="text-purple-500 text-3xl mb-4">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Ad-Free</h3>
+                        <p class="text-gray-300">Enjoy uninterrupted music without ads.</p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="bg-gray-800 p-6 rounded-xl text-center hover:bg-gray-700 transition">
+                        <div class="text-purple-500 text-3xl mb-4">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Offline Playback</h3>
+                        <p class="text-gray-300">Download songs and listen offline.</p>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div class="bg-gray-800 p-6 rounded-xl text-center hover:bg-gray-700 transition">
+                        <div class="text-purple-500 text-3xl mb-4">
+                            <i class="fas fa-headphones-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">High Quality</h3>
+                        <p class="text-gray-300">Experience superior sound quality.</p>
+                    </div>
+                    <!-- Benefit 4 -->
+                    <div class="bg-gray-800 p-6 rounded-xl text-center hover:bg-gray-700 transition">
+                        <div class="text-purple-500 text-3xl mb-4">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Unlimited Skips</h3>
+                        <p class="text-gray-300">Skip as many songs as you like.</p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mb-8 text-center">Choose Your Plan</h2>
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <!-- Plan 1 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-purple-900 p-6 text-center">
+                            <h3 class="text-xl font-bold">Individual</h3>
+                            <p class="text-gray-300">For 1 account</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-4xl font-bold mb-4">$9.99<span class="text-lg text-gray-400">/month</span></div>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>Ad-free music</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>Download 30 songs</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>High quality audio</span>
+                                </li>
+                            </ul>
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-full font-medium transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Plan 2 (Featured) -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition border-2 border-purple-500 transform scale-105">
+                        <div class="bg-purple-600 p-6 text-center">
+                            <div class="flex justify-center mb-2">
+                                <span class="bg-yellow-400 text-purple-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
+                            </div>
+                            <h3 class="text-xl font-bold">Duo</h3>
+                            <p class="text-gray-300">For 2 accounts</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-4xl font-bold mb-4">$12.99<span class="text-lg text-gray-400">/month</span></div>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>2 Premium accounts</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>Duo Mix: a playlist for two</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>Download 100 songs each</span>
+                                </li>
+                            </ul>
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-full font-medium transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Plan 3 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition">
+                        <div class="bg-purple-900 p-6 text-center">
+                            <h3 class="text-xl font-bold">Family</h3>
+                            <p class="text-gray-300">Up to 6 accounts</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-4xl font-bold mb-4">$15.99<span class="text-lg text-gray-400">/month</span></div>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>6 Premium accounts</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>Family Mix: a playlist for all</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-purple-500 mr-2"></i>
+                                    <span>Parental controls</span>
+                                </li>
+                            </ul>
+                            <button class="w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-full font-medium transition">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Player (same as index.html) -->
+    <footer class="bg-gray-800 border-t border-gray-700 p-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Player controls would go here -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
